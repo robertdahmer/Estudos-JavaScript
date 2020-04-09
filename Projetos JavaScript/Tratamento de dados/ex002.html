@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis e tipos primitivos</title>
+    <style>
+        body {
+            background-color: rgb(109, 187, 255);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color:rgba(231, 245, 31, 0.904)
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var nome = String(window.prompt('Qual é seu nome?'))
+        document.write(`Seu nome tem ${nome.toUpperCase().length} letras`)
+        document.write(`<br>Seu nome em maiúsculas fica ${nome.toUpperCase()}`)
+        document.write(`<br>Seu nome em minúsculas fica ${nome.toLowerCase()}`)
+    </script>
+</body>
+</html>
