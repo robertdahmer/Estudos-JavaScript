@@ -10,25 +10,39 @@
             background-color: rgb(67, 241, 183);
             font: normal 20pt Arial;
         }
-        p#vel{
-            font: normal 13pt Arial;
+        div#resultado{
+            font: normal 16pt Arial;
         }
+      
     </style>
 <body>
-    <h1>Sistema monitorador de velocidade</h1>
+    <h1>Sistema de Multas</h1>
+
+
+
+
     Velocidade do carro: <input type="number" name="velocidade" id="velocidade">
-    <input type="button" value="Verificar">
-    <p id='oitentaMais'></p>
-    <p id='oitentaMenos'></p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id='resultado'>
+
+    </div>
+
+
     <script>
-        var velocidade = window.document.querySelector('input#velocidade')
-        velocidade.addEventListener('mouseclick', clicou)
-        function clicou() {
-            if (oitentaMais.value > 80) {
-            oitentaMais = 'Aiai'
-        }
         
+        function calcular(){
+            var txtv = window.document.querySelector('input#velocidade')
+            var velocidade = Number(txtv.value)
+            var limite = 80
+            var resultado = window.document.getElementById('resultado')
+            resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${velocidade}km/h</strong></p>`
+            if (velocidade > limite) {
+                resultado.innerHTML += `<p>Ultrapassou o limite de ${limite}km/h. MULTADO!</p>`
+            }
+            resultado.innerHTML += 'Dirija sempre com cinto de segurança!'
         }
+
+        
     </script>
 </body>
 </html>
