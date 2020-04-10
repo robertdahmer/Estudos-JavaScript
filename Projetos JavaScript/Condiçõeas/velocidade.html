@@ -16,16 +16,18 @@
     </style>
 <body>
     <h1>Sistema monitorador de velocidade</h1>
-    <p id='vel'>Qual foi sua velocidade?</p>
-    <input type="number" name="velocidade" id="velocidade">
+    Velocidade do carro: <input type="number" name="velocidade" id="velocidade">
+    <input type="button" value="Verificar">
     <p id='oitentaMais'></p>
     <p id='oitentaMenos'></p>
     <script>
-        var acima = window.document.querySelector('input#valocidade')
-        var oitentaMais = window.document.querySelector('p#oitentaMais')
-        var oitentaMenos = window.document.querySelector('p#oitentaMenos')
-        if (oitentaMais.value > 80) {
+        var velocidade = window.document.querySelector('input#velocidade')
+        velocidade.addEventListener('mouseclick', clicou)
+        function clicou() {
+            if (oitentaMais.value > 80) {
             oitentaMais = 'Aiai'
+        }
+        
         }
     </script>
 </body>
