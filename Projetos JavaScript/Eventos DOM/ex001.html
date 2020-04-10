@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introdução ao DOM em JS</title>
+    <title>Eventos DOM</title>
     <style>
         body {
-            background-color: rgb(109, 187, 255);
+            background-color: rgb(5, 41, 73);
             color: white;
             font: normal 20pt Arial;
         }
-        h1 {
-            color:rgba(231, 245, 31, 0.904)
+
+       
+
+        div#area {
+            background: rgb(180, 55, 138);
+            color: black;
+            font-size: large;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScipt</p>
-    <div name='msg'>Clique em mim</div>
+    
+    <div id='area' >
+        Interaja...
+    </div>
+    <!--<div id='area' onmouseenter="clicar()" onclick="cliquei()" onmousedown="mousebaixo()">
+        Interaja...
+    </div>-->
+
     <script>
-        
+        //var teste = window.document.querySelector('h1.teste')
+        //teste.style.color = 'black'
+        //teste.style.background = 'orange'
+        var a = window.document.getElementById('area')
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mousedown', seguramouse)
+        a.addEventListener('click', clica)
+        function entrou() {
+            a.innerHTML = '<strong>Oi senpai ^u^</strong>'
+            a.style.background = 'pink'
+            
+        }
+        function clica() {
+            
+            a.innerText = "P-por que parou u_u?"
+            a.style.background = 'pink'
+        }
+        function seguramouse() {
+            
+            a.innerHTML = '<strong>C-Continua ´°-°`</strong>'
+            a.style.background = 'pink'
+        }
+
+
     </script>
 </body>
+
 </html>

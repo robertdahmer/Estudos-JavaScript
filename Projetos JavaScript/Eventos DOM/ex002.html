@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            background-color: rgb(5, 41, 73);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        div#resultado {
+            font: normal 10pt Arial;
+        }
+        input#n2 {
+            text-align: center;
+        }
+        input#n1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Valores</h1>    
+    <input type="number" name="n1" id="n1">
+    +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" onclick="somar()">
+    <p></p>
+    <div id="resultado">Aqui vai o resultado</div>
+    <script>
+        var pNum = window.document.getElementById('n1')
+        var sNum = window.document.querySelector('input#n2')
+        function somar() {
+            var n1 = Number(pNum.value)
+            var n2 = Number(sNum.value)
+            var soma = n1 + n2
+            var tela = window.document.getElementById('resultado')
+            //tela.style.font = 'normal 40pt Arial'
+            tela.innerText = `A soma entre ${n1} e ${n2} é ${soma}`
+            // print()  O PRINT EM JS SERVE PARA MANDAR IMPRIMIR
+            
+        }
+
+    </script>
+</body>
+
+</html>
