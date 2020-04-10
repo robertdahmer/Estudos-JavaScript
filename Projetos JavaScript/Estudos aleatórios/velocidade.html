@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você passou da velocidade?</title>
+</head>
+    <style>
+        body{
+            background-color: rgb(67, 241, 183);
+            font: normal 20pt Arial;
+        }
+        p#vel{
+            font: normal 13pt Arial;
+        }
+    </style>
+<body>
+    <h1>Sistema monitorador de velocidade</h1>
+    <p id='vel'>Qual foi sua velocidade?</p>
+    <input type="number" name="velocidade" id="velocidade">
+    <p id='oitentaMais'></p>
+    <p id='oitentaMenos'></p>
+    <script>
+        var acima = window.document.querySelector('input#valocidade')
+        var oitentaMais = window.document.querySelector('p#oitentaMais')
+        var oitentaMenos = window.document.querySelector('p#oitentaMenos')
+        if (oitentaMais.value > 80) {
+            oitentaMais = 'Aiai'
+        }
+    </script>
+</body>
+</html>

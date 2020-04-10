@@ -1,7 +1,8 @@
-var a = 8
-var b = 15
-if(b == a){
-console.log('Essa condição funcionou')
+var limite = 80
+var vel = 
+console.log(`A sua velocidade foi de ${vel}km/h`)
+if(vel > limite) {
+    console.log(`Você passou do limite de velocidade ${limite}. \nVocê foi MULTADO!`)
 }else{
-    console.log('Tá uma porra')
+    console.log('Dirija sempre usando cinto de segurança!')
 }
