@@ -9,13 +9,16 @@ if (horas > 6 && horas < 12){ // manhã
 }
 if (horas < 19){ // tarde
     var horaDia = window.document.getElementById('horário')
+    var corpo = window.document.getElementById('corpo')
+    var imagem = window.document.getElementById('imagem')
     horaDia.innerHTML = `Agora são ${horárioB} horas.`
+    imagem.innerHTML = '<img id="imagem"src="fotoafternoon.png" alt="Foto da noite">'
+    corpo.style.background = ''
 }
 if (horas >= 19){ // noite
     var horaDia = window.document.getElementById('horário')
     var corpo = window.document.getElementById('corpo')
     corpo.style.background = 'rgb(7, 60, 99)'
-    //#04426F
     
     horaDia.innerHTML = `Agora são ${horárioB} horas.`
 
