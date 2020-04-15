@@ -14,8 +14,8 @@ if (horas < 19){ // tarde
 if (horas >= 19){ // noite
     var horaDia = window.document.getElementById('horário')
     var corpo = window.document.getElementById('corpo')
-    corpo.style.background = 'rgb(39, 40, 44)'
-    
+    corpo.style.background = 'rgb(7, 60, 99)'
+    //#04426F
     
     horaDia.innerHTML = `Agora são ${horárioB} horas.`
 
