@@ -1,3 +1,4 @@
+function carregar(){
 var agora = new Date()
 var horas = agora.getHours()
 var minutos = agora.getMinutes()
@@ -29,4 +30,5 @@ if (horas >= 19){ // noite
     
     horaDia.innerHTML = `Agora são ${horárioB} horas. Boa Noite!`
 
+}
 }
