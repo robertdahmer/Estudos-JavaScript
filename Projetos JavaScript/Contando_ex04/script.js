@@ -1,22 +1,26 @@
 function contar() {
-    var inicio = window.document.getElementById('inicio')
-    var fim = window.document.getElementById('final')
-    var passo = window.document.getElementById('passo')
+var inicio = window.document.getElementById('inicio')
+var final = window.document.getElementById('final')
+var passo = window.document.getElementById('passo')
+var res = window.document.getElementById('resultado')
 
-    var Valor_inicio = inicio.value
-    var Valor_final = fim.value
-    var Valor_passo = passo.value
-    if (Valor_passo == 0){
-        window.alert('PASSO INVÁLIDO! Considerando valor 1')
+if (i == 0 || f == 0 || p == 0){
+    window.alert('[ERRO] Consulte os valores e tente novamente!')
+    p = 1
+} else {
+    var i = Number(inicio.value)
+    var f = Number(final.value)
+    var p = Number(passo.value)
+}
+var c = i
+if (i > f){
+    for (c; c >= f; c -= p){
+        res.innerHTML += `${c} \u{1F449}`
     }
-    if (Valor_inicio == 0){
-        window.alert('INÍCIO INVÁLIDO! Considerando valor 1')
+} else {
+    for (c; c <= f; c += p) {
+    res.innerHTML += `${c} \u{1F449}`
+        }
     }
-    if (Valor_final == 0) {
-            window.alert('FINAL INVÁLIDO! Considerando valor 1')
-    }
-    var cont = 0
-    for(Valor_inicio; cont != Valor_final; cont += Valor_passo){
-      
-    }
+    res.innerHTML += `\u{1F3C1}`
 }
