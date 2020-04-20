@@ -6,12 +6,19 @@
     <title>Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body id="corpo" onload="carregar()">
+<body id="corpo">
     <header>
-        <h1>Cabeçalho</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
-        <p>Seção</p>
+        <div>
+            <p>Número:<input type="number" name="numero" id="numero">
+            <input type="button" value="Gerar Tabuada" onclick="resultado()"></p>
+        </div>
+        <div>
+            <select name="resultado" id="resultado" size="10">
+                <option>Preparando a Tabuada...</option>
+        </div>
     </section>
     <footer>
         <a id= 'github'href="https://github.com/robertdahmer">&copy; Robert Dahmer</a>
